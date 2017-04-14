@@ -1,21 +1,10 @@
 php:
-  version: '5.5.16'
+  version: '5.6.0'
 hooks:
-  pre_setup: composer.phar install
+  pre_setup: echo "Before setup; install packages for example with composer"
   worker_setup: echo "Per-worker setup; nothing to do in simplest case"
   post_setup: echo "Package assets or otherwise prepare to run tests"
   post_build: echo "Deploy to application server here"
 cache:
-  key_paths:
-    - composer.json
-    - composer.lock
-  save_paths:
-    - vendor
-tests:
-  - type: phpunit
-    mode: parallel
-    output: exit-status
-    command: vendor/bin/solano-phpunit
-    #config: custom-phpunit.xml    # Defaults : phpunit.xml, phpunit.xml.dist
-    files:
-      - tests/**Test.php
+  nocache: true
+test_pattern: 'none'
