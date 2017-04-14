@@ -1,0 +1,10 @@
+php:
+  version: '5.5.16'
+hooks:
+  pre_setup: echo "Before setup; install packages for example with composer"
+  worker_setup: echo "Per-worker setup; nothing to do in simplest case"
+  post_setup: echo "Package assets or otherwise prepare to run tests"
+  post_build: echo "Deploy to application server here"
+test_pattern: 'none'
+tests:
+  - echo "shell command to run tests"
