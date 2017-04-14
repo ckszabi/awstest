@@ -5,12 +5,13 @@ hooks:
   worker_setup: echo "Per-worker setup; nothing to do in simplest case"
   post_setup: echo "Package assets or otherwise prepare to run tests"
   post_build: echo "Deploy to application server here"
-cache:
-  key_paths:
-    - composer.json
-    - composer.lock
-  save_paths:
-    - vendor
+#cache:
+#  key_paths:
+#    - composer.json
+#    - composer.lock
+#  save_paths:
+#    - vendor
+test_pattern: 'none'
 tests:
   - type: phpunit
     mode: parallel
