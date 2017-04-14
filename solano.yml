@@ -8,10 +8,4 @@ hooks:
 cache:
   nocache: true
 test_pattern: 'none'
-tests:
-  - type: phpunit
-    mode: parallel
-    output: exit-status
-    command: vendor/bin/solano-phpunit
-    files:
-      - tests/**Test.php
+
