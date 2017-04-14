@@ -1,7 +1,8 @@
 php:
   version: '5.6.0'
 hooks:
-  pre_setup: composer.phar install
+  pre_setup: echo "Before setup; install packages for example with composer"
+  #composer.phar install
   worker_setup: echo "Per-worker setup; nothing to do in simplest case"
   post_setup: echo "Package assets or otherwise prepare to run tests"
   post_build: echo "Deploy to application server here"
