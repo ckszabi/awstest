@@ -14,3 +14,11 @@ cache:
 test_pattern: 'none'
 tests:
   - echo "shell command to run tests"
+tests:
+  - type: phpunit
+    mode: parallel
+    output: exit-status
+    command: vendor/bin/solano-phpunit
+    #config: custom-phpunit.xml    # Defaults : phpunit.xml, phpunit.xml.dist
+    files:
+      - tests/**Test.php
