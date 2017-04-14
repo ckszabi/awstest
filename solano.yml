@@ -11,12 +11,10 @@ cache:
     - composer.lock
   save_paths:
     - vendor
-test_pattern: 'none'
 tests:
   - type: phpunit
     mode: parallel
     output: exit-status
     command: vendor/bin/solano-phpunit
-    #config: custom-phpunit.xml    # Defaults : phpunit.xml, phpunit.xml.dist
     files:
       - tests/**Test.php
