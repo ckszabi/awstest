@@ -13,8 +13,6 @@ cache:
     - vendor
 test_pattern: 'none'
 tests:
-  - echo "shell command to run tests"
-tests:
   - type: phpunit
     mode: parallel
     output: exit-status
