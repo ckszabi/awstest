@@ -1,5 +1,6 @@
 php:
   version: '5.6.0'
+submodules: true
 hooks:
   pre_setup: composer.phar install
   worker_setup: echo "Per-worker setup; nothing to do in simplest case"
