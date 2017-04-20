@@ -7,7 +7,11 @@ hooks:
   post_setup: echo "Package assets or otherwise prepare to run tests"
   post_build: echo "Deploy to application server here"
 cache:
-  nocache: true
+  key_paths:
+    - composer.json
+    - composer.lock
+  save_paths:
+    - vendor
 test_pattern: 'none'
 tests:
   - type: phpunit
