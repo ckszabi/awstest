@@ -4,7 +4,7 @@
  include './config/config.php';
 
  if (isset($config)) {
-	 echo '$config is:<br>';
+	 echo 'included $config is:<br>';
 	 var_dump($config);
  }
  else {
