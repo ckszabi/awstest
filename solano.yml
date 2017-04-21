@@ -11,7 +11,7 @@ deploy:
       - branch: independent
         action: publish
         deployment_group: awstest
-        revision: '{"revisionType":"S3","s3Location":{"bucket":"solano-codedeploy","bundleType":"zip","key":"DefaultActions.tgz"}}'
+        revision: '{"revisionType":"S3","s3Location":{"bucket":"solano-codedeploy-2","bundleType":"zip","key":"DefaultActions.tgz"}}'
 
 submodules: true
 hooks:
