@@ -11,6 +11,7 @@ deploy:
   region: eu-west-1
   app: My First Elastic Beanstalk Application
   env: Default-Environment
+  bucket_name: "travis-deploy-awstest"
   on:
     repo: ckszabi/awstest
     branch: independent
